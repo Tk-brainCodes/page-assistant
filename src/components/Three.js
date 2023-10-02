@@ -14,6 +14,10 @@ const ThreeModel = () => {
 
     const init = () => {
       scene = new THREE.Scene()
+
+      // Set the background color to white (0xffffff)
+      scene.background = new THREE.Color(0xffffff)
+
       scene.add(new THREE.AxesHelper(5))
 
       camera = new THREE.PerspectiveCamera(
@@ -33,7 +37,7 @@ const ThreeModel = () => {
       controls.target.set(0, 1, 0)
 
       const loader = new FBXLoader()
-      loader.load('../../public/assis-walk.fbx', object => {
+      loader.load('/assis-walk.fbx', object => {
         // Scale and position the model
         object.scale.set(0.01, 0.01, 0.01)
         object.position.set(0, 0, 0)

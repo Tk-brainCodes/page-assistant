@@ -47,7 +47,7 @@ const App = () => {
 
       // Load the FBX model
       const loader = new FBXLoader()
-      loader.load('../public/assis-walk.fbx', object => {
+      loader.load('/assis-walk.fbx', object => {
         // Scale and position the model
         object.scale.set(0.01, 0.01, 0.01)
         object.position.set(0, 0, 0)
@@ -104,46 +104,46 @@ const App = () => {
 
   return (
     <div>
-      <div ref={containerRef} />
-      <div className='flex flex-col space-y-2'>
+      <div className='flex gap-3 space-y-2'>
         <button
-          className='btn'
+          className='btn px-2 py-2 bg-blue-600 text-white rounded-full'
           onClick={() => moveModel('Button 1', { x: 0, y: 0, z: 0 })}
         >
           Button 1
         </button>
         <button
-          className='btn'
+          className='btn px-2 py-2 bg-blue-600 text-white rounded-full'
           onClick={() => moveModel('Button 2', { x: 2, y: 0, z: 0 })}
         >
           Button 2
         </button>
         <button
-          className='btn'
+          className='btn px-2 py-2 bg-blue-600 text-white rounded-full'
           onClick={() => moveModel('Button 3', { x: -2, y: 0, z: 0 })}
         >
           Button 3
         </button>
         <button
-          className='btn'
+          className='btn px-2 py-2 bg-blue-600 text-white rounded-full'
           onClick={() => moveModel('Button 4', { x: 0, y: 0, z: -2 })}
         >
           Button 4
         </button>
         <button
-          className='btn'
+          className='btn px-2 py-2 bg-blue-600 text-white rounded-full'
           onClick={() => moveModel('Button 5', { x: 0, y: 0, z: 2 })}
         >
           Button 5
         </button>
         <button
-          className='btn'
+          className='btn px-2 py-2 bg-blue-600 text-white rounded-full'
           onClick={() => moveModel('Button 6', { x: 0, y: 2, z: 0 })}
         >
           Button 6
         </button>
       </div>
       <div id='explanation' className='mt-4 text-center text-gray-600'></div>
+      <div ref={containerRef} />
     </div>
   )
 }
